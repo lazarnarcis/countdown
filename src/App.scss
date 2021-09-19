@@ -12,6 +12,14 @@ body {
   height: 100vh;
 }
 
+.timer > b {
+  font-size: 35px;
+}
+
+small {
+  letter-spacing: 1px;
+}
+
 .elements p {
   text-align: center;
   font-weight: bold;
@@ -19,7 +27,7 @@ body {
 }
 
 .elements span {
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
 }
 
 p {

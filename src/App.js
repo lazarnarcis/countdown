@@ -11,20 +11,15 @@ export default function App() {
     var countDownDate = new Date(`Jan 1, ${nextYear} 00:00:00`).getTime()
     var now = new Date().getTime()
     var distance = countDownDate - now
-      
     setDays(Math.floor(distance / (1000 * 60 * 60 * 24)))
     setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
     setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
     setSeconds(Math.floor((distance % (1000 * 60)) / 1000))
-
-    if (distance < 0) {
-      clearInterval(interval)
-    }
   }
   setTimeout(() => {
     intervalFunction()
   }, 1)
-  const interval = setInterval(() => {
+  setInterval(() => {
     intervalFunction()
   }, 1000) 
 
@@ -38,18 +33,21 @@ export default function App() {
             <span>days</span>
           </div>
         </div>
+        <b id="">:</b>
         <div className="container">
           <div className="elements">
             <p>{hours}</p>
             <span>hours</span>
           </div>
         </div>
+        <b>:</b>
         <div className="container">
           <div className="elements">
             <p>{minutes}</p>
             <span>minutes</span>
           </div>
         </div>
+        <b>:</b>
         <div className="container">
           <div className="elements">
             <p>{seconds}</p>

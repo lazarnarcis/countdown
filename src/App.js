@@ -15,13 +15,11 @@ export default function App() {
     setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
     setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
     setSeconds(Math.floor((distance % (1000 * 60)) / 1000))
+    setInterval(intervalFunction, 1000)
   }
   setTimeout(() => {
     intervalFunction()
   }, 1)
-  setInterval(() => {
-    intervalFunction()
-  }, 1000) 
 
   return (
     <div className="App">

@@ -4,12 +4,12 @@
   padding: 0;
 }
 
-.timer > b {
-  font-size: 35px;
+body {
+  background-image: url(bck.jpg);
 }
 
-small {
-  letter-spacing: 1px;
+.timer > b {
+  font-size: 35px;
 }
 
 .elements p {
@@ -57,4 +57,14 @@ p {
 
 h1 {
   text-align: center;
+}
+
+@media (max-width: 750px) {
+  .elements p {
+    font-weight: normal;
+    font-size: 25px;
+  }
+  .elements span {
+    letter-spacing: 0;
+  }
 }
